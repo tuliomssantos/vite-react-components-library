@@ -9,7 +9,8 @@
     ".": {
       "import": "./dist/my-lib.js",
       "require": "./dist/my-lib.umd.cjs"
-    }
+    },
+    "./dist/style.css": "./dist/style.css"
   },
   "sideEffects": false,
   "files": [
@@ -19,7 +20,7 @@
     "clean": "rimraf dist",
     "build": "yarn clean && run-p build:*",
     "build:scripts": "vite build",
-    "build:types": "tsc --emitDeclarationOnly"
+    "build:types": "tsc --emitDeclarationOnly && tsc-alias"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -31,9 +32,13 @@
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.21",
+    "postcss-preset-env": "^8.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^4.4.1",
+    "tsc-alias": "^1.8.5",
+    "typed-css-modules": "^0.7.2",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
   }

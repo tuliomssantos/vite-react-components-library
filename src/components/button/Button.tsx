@@ -1,7 +1,7 @@
-import React from "react";
+import styles from "./styles.module.css";
 
 import type { ReactNode } from "react";
 
 export default function Button({ children }: { children: ReactNode }) {
-  return <div className="button">{children}</div>;
+  return <div className={styles.button}>{children}</div>;
 }
